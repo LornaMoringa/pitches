@@ -61,4 +61,9 @@ class Pitch(db.Model):
         pitches = Pitch.query.filter_by(category=category).all()
         return pitches
 
+    @classmethod
+    def get_pitch(cls,id):
+        pitch = Pitch.query.filter_by(id=id).first()
+
+        return pitch
 
